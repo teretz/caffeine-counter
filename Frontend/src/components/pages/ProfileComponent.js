@@ -38,7 +38,7 @@ export default function ProfileView() {
 
  
 function Choices() {
-  const [count, setCount] = useState(0);
+  const [caffeine, setCaffeine] = useState(500);
 
 
   return (
