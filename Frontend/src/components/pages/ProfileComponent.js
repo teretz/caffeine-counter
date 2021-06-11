@@ -44,19 +44,19 @@ function Choices() {
   return (
     <React.Fragment>
       <Grid item xs={12}>
-        <Button focusRipple variant="contained" color="secondary" size="large" type="submit" onClick={() => setCaffeine(caffeine - 100) }>Americano</Button>
+        <Button focusRipple variant="contained" color="secondary" size="large" type="submit" onClick={() => setCaffeine(caffeine - 77) }>Americano</Button>
       </Grid>
       <Grid item xs={12}>
-        <Button focusRipple variant="contained" color="primary" size="large" onClick={() => {  this.chooseBlackCoffee.bind(this) }}>Black Coffee</Button>
+        <Button focusRipple variant="contained" color="primary" size="large" type="submit" onClick={() => setCaffeine(caffeine - 95) }>Black Coffee</Button>
       </Grid>
       <Grid item xs={12}>
-        <Button focusRipple variant="contained" color="default" size="medium" onClick={() => {  this.chooseFiveHourEnergy.bind(this)  }}>Five Hour Energy</Button>
+        <Button focusRipple variant="contained" color="default" size="medium" type="submit" onClick={() => setCaffeine(caffeine - 200) }>Five Hour Energy</Button>
       </Grid>
       <Grid item xs={12}>
-        <Button focusRipple variant="outlined" color="primary" size="small" onClick={() => { this.chooseMonsterUltraSunrise.bind(this)   }}>Monster Ultra Sunrise</Button>
+        <Button focusRipple variant="outlined" color="primary" size="small" type="submit" onClick={() => setCaffeine(caffeine - 75) }>Monster Ultra Sunrise</Button>
       </Grid>
       <Grid item xs={12}>
-        <Button focusRipple variant="outlined" color="secondary" size="large" onClick={( ) => { this.chooseSugarfreeNOS.bind(this)    }}>Sugarfree NOS</Button>
+        <Button focusRipple variant="outlined" color="secondary" size="large" type="submit" onClick={() => setCaffeine(caffeine - 130) }>Sugarfree NOS</Button>
       </Grid>
     </React.Fragment>
   );
@@ -75,7 +75,7 @@ function Choices() {
               <h3><b>Name: {profileResponse.data.name}</b></h3>
               <h3><b>email: {profileResponse.data.email}</b></h3>
               <h3><b>Creation Date: {profileResponse.data.created_at}</b></h3>
-              <h3><b>Caffeine Limit Remaining: {caffeine}  / {profileResponse.data.caffeine_limit_remaining}</b> <Button variant="outlined" color="primary" size="small" onClick={() => { alert('clicked') }}>Reset Caffeine Limit</Button></h3>
+              <h3><b>Caffeine Limit Remaining: {caffeine}  / {profileResponse.data.caffeine_limit_remaining}</b> <Button variant="outlined" color="primary" size="small" onClick={() => setCount(500)}>Reset Caffeine Limit</Button></h3>
               </div>
               :<div>Unable to display profile</div>
           }
